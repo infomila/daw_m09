@@ -14,12 +14,25 @@
     background-image: url(../../../images/arrow_left.jpg);
     background-repeat:no-repeat ;
     background-position: 100% 50%;
+    -webkit-transition: margin-left 1s; /* Safari */
+    transition: margin-left 1s;    
 }
 
 .important:hover {
     background-position: 90% 50%;
+    margin-left:50px;
+    -webkit-transition: margin-left 1s; /* Safari */
+    transition: margin-left 1s;
 }
 
 input:active {
     background-color:yellow;
+}
+
+div.noticia:nth-of-type(2n) {
+    background-color:#99957b;
+}
+
+li:first-child {
+    font-weight:bold;
 }
