@@ -78,7 +78,7 @@ p:first-child:after {
     position:absolute;
     top:0px;
     left:0px;
-    background-image:url();
+    background-image:url("images/corner.png");
 }
 
 
