@@ -1,0 +1,67 @@
+@padding: 6%;
+@amplada_col_2:(100% - 4*@padding)/2; 
+
+.two_cols {
+    overflow:hidden;
+     section {
+        float:left;
+        width:@amplada_col_2;
+        padding:@padding;
+    }
+}
+//---------------------------------
+@padding_central:20px;
+@amplada_col_3: 100%/3;
+.three_cols {
+    overflow:hidden;
+    aside {
+        float:left;
+        width:@amplada_col_3;
+        padding: @padding_central;
+    }
+    section {
+        float:left;
+        width:~"calc(33.3% - 120px)";
+        padding: @padding_central;
+    }
+}
+
+.three_cols_2 {
+    overflow:hidden;
+    aside, section {
+        float:left;
+        width:@amplada_col_3;
+        padding: 40px;
+        box-sizing: border-box;
+    }
+}
+
+
+header, footer{
+    background-color:#fff60e;
+    display: block;
+    height:50px;
+}
+
+
+section {
+    //border:1px solid red;
+    display: block;
+    background-color:#eb09da;
+    
+    &:nth-child(2n) {
+        background-color:#3e8ba5;
+    }
+    &:nth-child(3n) {
+        background-color:#eb2157;
+    }
+}
+
+
+aside {
+    background-color:#61d916;
+    &:nth-child(2n) {
+        background-color:#2336c3;
+    }
+}
+

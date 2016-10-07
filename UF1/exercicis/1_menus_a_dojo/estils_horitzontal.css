@@ -6,7 +6,7 @@
   background-color: #53aac4;
   display: block;
   position: relative;
-  /* width:100%;*/
+  width: 150px;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3b679e+0,2b88d9+50,207cca+51,7db9e8+100;Blue+Gloss+%232 */
   background: #3b679e;
   /* Old browsers */
@@ -69,7 +69,7 @@
   line-height: 40px;
   transition: height 1s, color 4s;
   border: 1px solid #15151d;
-  padding: 20px;
+  padding: 0px 20px;
   color: black;
 }
 .menu li:hover > ul {
