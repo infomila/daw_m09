@@ -1,7 +1,28 @@
 @padding: 6%;
 @amplada_col_2:(100% - 4*@padding)/2; 
 
+
+h1 {
+     text-align: center;
+    font-size:1.5em;
+    font-family: Arial, sans-serif;
+    margin-top:40px;
+}
+
+header, nav, ul, li {
+    display: block;
+}
+ul {
+    text-align: center;
+}
+li {
+    display:inline-block;
+    border:1px solid black;
+    padding:10px;
+    margin-top: 20px;
+}
 .two_cols {
+    outline:1px solid red;
     overflow:hidden;
      section {
         float:left;
@@ -13,6 +34,7 @@
 @padding_central:20px;
 @amplada_col_3: 100%/3;
 .three_cols {
+    outline:1px solid red;
     overflow:hidden;
     aside {
         float:left;
@@ -27,6 +49,7 @@
 }
 
 .three_cols_2 {
+    outline:1px solid red;
     overflow:hidden;
     aside, section {
         float:left;
@@ -40,19 +63,19 @@
 header, footer{
     background-color:#fff60e;
     display: block;
-    height:50px;
+    height:100px;
 }
 
 
 section {
     //border:1px solid red;
     display: block;
-    background-color:#eb09da;
+    background-color:#86267f;
     
-    &:nth-child(2n) {
-        background-color:#3e8ba5;
+    &:nth-of-type(2n) {
+        background-color:#30aad3;
     }
-    &:nth-child(3n) {
+    &:nth-of-type(3n) {
         background-color:#eb2157;
     }
 }
@@ -60,7 +83,7 @@ section {
 
 aside {
     background-color:#61d916;
-    &:nth-child(2n) {
+    &:nth-of-type(2n) {
         background-color:#2336c3;
     }
 }
