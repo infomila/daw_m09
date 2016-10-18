@@ -32,8 +32,8 @@ li {
 @c3_color:#af4aa8;
 
 .three_cols{
-   
-    background-color:@c2_color;
+    position:relative;
+    background-color: @c2_color;
     outline:1px solid red;
     overflow:hidden;
     aside, section {
@@ -44,8 +44,29 @@ li {
         padding: 40px;
         box-sizing: border-box;
     }
+    
+    &:after, &:before{
+        content:"";
+        z-index:1;
+        
+        width:@amplada_col_3;
+        height: 100%;
+        top:0px;        
+        display: block;
+        position:absolute;
+        background-color: @c1_color;
+    }
+    &:after{
+       left:0px; 
+        border-right: 5px solid black;
+    }
+    &:before {
+        right:0px;
+        border-left: 5px solid black;
+        background-color: @c3_color;
+    }
 }
-
+ 
 
 header, footer{
     background-color:#fff60e;
@@ -53,7 +74,7 @@ header, footer{
     height:100px;
 }
 
-
+/*
 .c1 {
     background-color:@c1_color;
 }
@@ -62,5 +83,5 @@ header, footer{
 }
 .c3 {
     background-color:@c3_color;
-}
+}*/
 
