@@ -1,0 +1,126 @@
+
+html {
+         height:100%;
+}
+#sliderRdo1, #sliderRdo2, #sliderRdo3 {
+    display:none;
+}
+.slider {
+    position:relative;
+    height:250px;
+    overflow: hidden;
+    min-width: 600px;
+    #grouper {
+        width:300%;
+        height:250px;
+        overflow: hidden;
+        position:relative;
+        transition: left 1s  ease-in-out;
+    }
+    img {     
+        width: 33.333%;
+        min-height:250px;
+        float:right;
+        position: relative;
+        top:50%;
+        left:0%;
+        transform: translate(0%,-50%);
+    }
+    
+    #leftBox, #rightBox {
+        width:40px;
+        height:40px;
+        position:absolute;
+        top:50%;
+        
+        margin-top:-20px;
+        background-color:white;
+        i {
+            display:block;
+            width:40px;
+            height:40px;
+            font-size:44px;
+            text-align: center;
+            position:absolute;
+            top:-2px;right:0px;
+            z-index:1;
+        }
+        border-radius:20px;
+        box-shadow: -0px 0px 8px 3px rgb(244, 240, 147);        
+    }
+    #leftBox {
+        left:1%;
+    }
+    #rightBox{
+        right:1% ;       
+    }
+    label {
+        display:block;
+        width:40px;
+        height:40px;
+    }
+    
+    #bullets{
+        display:block;
+        position:absolute;
+        text-align: center;
+        width:100%;
+        bottom:10px;
+        label {
+            display:inline-block;
+            width:10px;
+            height:10px;
+            border-radius:15px;
+            background-color: white;
+            margin-left:10px;
+            border:1px solid black;               
+            box-shadow: -0px 0px 8px 3px rgb(244, 240, 147);        
+        }
+    }
+}
+#leftBox div, #rightBox div{
+    display:none;
+    position:absolute;
+    top:0px;right:0px;
+    z-index:10;
+    width:40px;
+    height:40px;
+}
+
+#sliderRdo1:checked ~ .slider #grouper {
+    left:0%
+}
+#sliderRdo2:checked ~ .slider #grouper {
+    left:-100%
+}
+#sliderRdo3:checked ~ .slider #grouper {
+    left:-200%
+}
+
+#sliderRdo1:checked ~ .slider {
+    #leftBox .sliderl3 ,
+    #rightBox .sliderl2 {
+        display: block;
+    }
+    #bullets label:nth-child(1) {
+        background-color: black;
+    }
+}
+#sliderRdo2:checked ~ .slider {
+    #leftBox .sliderl1 ,
+    #rightBox .sliderl3 {
+        display: block;
+    }
+    #bullets label:nth-child(2) {
+        background-color: black;
+    }
+}
+#sliderRdo3:checked ~ .slider {
+    #leftBox .sliderl2 ,
+    #rightBox .sliderl1 {
+        display: block;
+    }
+    #bullets label:nth-child(3) {
+        background-color: black;
+    }
+}
