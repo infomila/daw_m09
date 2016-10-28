@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: normal;
+  src: url("Raleway/Raleway-Regular.ttf");
+}
+
+
+/* latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: bold;
+  src: url("Raleway/Raleway-ExtraBold.ttf");
+}
+
+div {
+    font-family: fredericka-the-great, Impact, sans-serif;
+    font-size: 80px;
+}
+
+p, a {
+    font-family: 'Raleway';
+}
+a {
+    font-weight: bold;
+}
+
+
+.cufon {
+    font-size: 3em;
+}
