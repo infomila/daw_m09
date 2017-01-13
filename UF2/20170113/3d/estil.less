@@ -1,47 +1,13 @@
 //---------------------------
 @a: 100px;
-@b: @a * sqrt(2); 
-@angle: 50deg;
-//---------------------------
 
-.capsa {    
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    line-height: @a;
-}
-
-#cube {
-    // càlcul de l'amplada i l'alçada totals del cub
-    // dins del contenidor
-    width: 2*@a;
-    height: @b/2+(1.0+tan(@angle))* @a;
-    position: fixed;
+.capsa {
+    width:@a;
+    height: @a;
+    background-color:lime;
+    position:absolute;
     top: 50%;
     left: 50%;
-    transform:translate(-50%,-50%);
+    margin-top:  -@a/2;
+    margin-left: -@a/2;
 }
-
-.c1 {
-    width:  @b;
-    height: @b;
-    background-color: lime;
-    transform-origin:  left bottom;
-    transform: translateY( -@b/2 ) scaley(tan(@angle)) rotate(45deg) ;      
-}
-
-.c2 {
-    background-color: brown;
-    width: @a;
-    height: @a;
-    transform-origin: 0% 0%;
-    transform: translateY(@b/2) skewy(@angle);
-}
-.c3 {
-    width: @a;
-    height: @a;
-    background-color: blue;
-    transform-origin: 0% 0%;
-    transform: translate(2*@a ,@b/2) scaleX(-1) skewY(@angle);
-}
- 
