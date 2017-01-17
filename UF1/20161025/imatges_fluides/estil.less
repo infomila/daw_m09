@@ -1,0 +1,37 @@
+
+html {
+         height:100%;
+}
+
+
+.capsa {
+   
+    height:200px;
+    overflow: hidden;
+    background-color: lime;
+    transition: 1s height linear;
+    img {
+        max-width: 100%;
+        position:relative;
+        top:50%;
+        transform:  translateY(-50%);
+    }
+}
+
+@media (max-width: 600px) {
+    .capsa {   
+        height:100px;        
+    }
+}
+
+@media (min-width: 900px) {
+    .capsa {   
+        height:300px;        
+    }
+}
+
+@media (min-width:600px) and (max-width:900px) {
+    body {   
+        background-color:red;
+    }
+}
