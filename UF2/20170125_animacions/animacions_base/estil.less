@@ -1,0 +1,86 @@
+
+// Mixin' per escurçar i fer més compatible els atributs d'animació
+.animation-name-mixin (@arguments, @time, @direction:normal, @count:1, @timing:linear) {
+	-webkit-animation-name: @arguments;
+	-moz-animation-name: @arguments;
+	animation-name: @arguments;
+    
+    -webkit-animation-duration: @time;
+    -moz-animation-duration: @time;
+    animation-duration: @time;
+    
+    -webkit-animation-direction: @direction;
+    -moz-animation-direction: @direction;
+    animation-direction: @direction;
+    
+    -webkit-animation-iteration-count: @count;
+    -moz-animation-iteration-count: @count;
+    animation-iteration-count: @count;
+    
+    -webkit-animation-timing-function: @timing;
+    -moz-animation-timing-function: @timing;
+    animation-timing-function: @timing;
+}
+
+
+
+.capsa {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100px;
+    height: 100px;
+    background-color: lime;
+    //animation-name: le_tour;
+    //animation-duration: 4s;
+    //animation-iteration-count: infinite;
+    //animation-direction: alternate;
+    .animation-name-mixin (le_tour, 4s, normal, infinite);
+
+}
+
+
+
+.le_tour(){
+    /*from{ 
+        background-color:lime;
+    }
+    to {
+        background-color:red;
+    }*/
+    
+    0% {
+        top: 0px;
+        left:0px;
+        margin-left: 0px;
+        margin-top: 0px;
+        background-color:lime;
+    }
+    25% {
+        top: 0px;
+        left:100%;
+        margin-top: 0px;
+        margin-left: -100px;
+    }
+    50% {
+        top: 100%;
+        left:100%;
+        margin-left: -100px;
+        margin-top: -100px;
+        background-color:red;
+    }
+    75% {
+        top: 100%;
+        left:0%;
+        margin-left: 0px;
+        margin-top: -100px;
+        background-color:lime;
+    }
+}
+
+@keyframes le_tour {.le_tour();}
+@-o-keyframes le_tour {.le_tour(); }
+@-ms-keyframes le_tour {.le_tour(); }
+@-moz-keyframes le_tour {.le_tour(); }
+@-webkit-keyframes le_tour {.le_tour(); }
+
